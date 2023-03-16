@@ -51,15 +51,6 @@ The following are the endpoints for the API:
 - `/api/orders` (ordering products)
 - `/api/admin` (admin dashboard)
 
-## Screenshots
-
-![Home Page](https://i.imgur.com/1234567.png)
-![Product Listing Page](https://i.imgur.com/1234567.png)
-![Product Detail Page](https://i.imgur.com/1234567.png)
-![Cart Page](https://i.imgur.com/1234567.png)
-![Order Confirmation Page](https://i.imgur.com/1234567.png)
-![Admin Dashboard](https://i.imgur.com/1234567.png)
-
 ## Tech Stack
 
 - Node.js
