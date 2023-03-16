@@ -37,9 +37,34 @@ class ShoppingRepository {
           });
 
           const orderId = uuidv4();
+
+          const order = new OrderModel({
+            orderId,
+            customerId,
+            amount,
+            txnId,
+            status: 'received',
+            items: cartItems,
+          });
+
+          profile.cart = [];
+          order.populate('items.product').execPopulate();
+          const orderResult = await order.save();
+
+          profile.orders.push(orderResult);
+          await profile.save();
+          return orderResult;
         }
       }
-    } catch (error) {}
+
+      return {};
+    } catch (error) {
+      throw new APIError(
+        'API ERROR',
+        STATUS_CODES.INTERNAL_ERROR,
+        'unable to find category '
+      );
+    }
   }
 }
 
