@@ -1,4 +1,5 @@
 const CustomerService = require('../services/customer-service');
+const userAuth = require('./middleware/auth');
 
 module.exports = (app) => {
   const service = new CustomerService();
