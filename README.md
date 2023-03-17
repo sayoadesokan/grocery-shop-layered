@@ -1,20 +1,25 @@
-# Grocery Shop Monolithic Architecture
+# Grocery Shop Layered Architecture
 
-This is a monolithic architecture project for a grocery shop. It provides features such as ordering products, adding to cart and wishlist, uploading new products, user login and signup, and much more. This project is built using Node.js, Express, MongoDB, and other dependencies.
+This is a project for a grocery shop that uses a layered architecture. It provides features such as ordering products, adding to cart and wishlist, uploading new products, user login and signup, and much more. This project is built using Node.js, Express, MongoDB, and other dependencies.
 
-## Design Pattern
+## Design
 
-![Design Pattern](./image/Screenshot%20from%202023-03-14%2010-20-51.png)
+![Design](./image/Screenshot%20from%202023-03-14%2010-20-51.png)
 
 ## Architecture
 
-For this grocery shop project, a monolithic architecture was chosen to simplify the development and deployment process. All of the features, such as user registration and login, product listing and search, adding/removing products to/from cart and wishlist, ordering products, and uploading new products, are implemented within a single application.
+For this grocery shop project, a layered architecture was chosen to improve the scalability, maintainability and flexibility of the application. The layered architecture consists of the following layers:
 
-This approach has several benefits. Firstly, it simplifies the development process as developers only have to work on a single codebase. Secondly, it makes deployment easier as the entire application can be deployed as a single unit. Thirdly, it can lead to better performance since communication between different components is not required.
+    Presentation Layer: This layer handles user interface and input/output operations.
+    Application Layer: This layer is responsible for the coordination and orchestration of business logic.
+    Domain Layer: This layer is where the core business logic is implemented.
+    Data Access Layer: This layer manages the communication between the application and the database.
 
-However, monolithic architectures can also have some drawbacks. For instance, it can be difficult to scale specific components independently. Additionally, since all components are bundled together, it can be harder to maintain and update the application in the long term.
+This approach has several benefits. Firstly, it makes the application more scalable as each layer can be scaled independently. Secondly, it makes the application more maintainable as changes in one layer do not affect the others. Thirdly, it improves the flexibility of the application as each layer can be replaced or modified without affecting the others.
 
-Overall, the decision to use a monolithic architecture for this project was made with the aim of simplifying the development and deployment process, while also ensuring good performance.
+However, a layered architecture can also have some drawbacks. For instance, it can increase the complexity of the application as it adds more layers to the codebase. Additionally, it can lead to performance issues as communication between different layers is required.
+
+Overall, the decision to use a layered architecture for this project was made with the aim of improving the scalability, maintainability, and flexibility of the application.
 
 ## Features
 
