@@ -17,7 +17,7 @@ module.exports = (app) => {
     }
   });
 
-  app.get('/shopping/orders', UserAuth, async (req, res, next) => {
+  app.get('/shopping/orders', userAuth, async (req, res, next) => {
     const { _id } = req.user;
 
     try {
@@ -28,7 +28,7 @@ module.exports = (app) => {
     }
   });
 
-  app.get('/shopping/cart', UserAuth, async (req, res, next) => {
+  app.get('/shopping/cart', userAuth, async (req, res, next) => {
     const { _id } = req.user;
     try {
       const { data } = await userService.getShoppingDetails(_id);

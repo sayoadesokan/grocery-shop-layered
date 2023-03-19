@@ -54,7 +54,6 @@ The following are the endpoints for the API:
 - `/api/cart` (adding/removing products to/from cart)
 - `/api/wishlist` (adding/removing products to/from wishlist)
 - `/api/orders` (ordering products)
-- `/api/admin` (admin dashboard)
 
 ## Tech Stack
 

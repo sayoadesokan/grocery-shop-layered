@@ -82,7 +82,7 @@ module.exports = (app) => {
     }
   });
 
-  app.put('/cart', UserAuth, async (req, res, next) => {
+  app.put('/cart', userAuth, async (req, res, next) => {
     const { _id, qty } = req.body;
 
     try {

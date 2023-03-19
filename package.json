@@ -11,5 +11,25 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
-  }
+  },
+  "name": "files",
+  "description": "This is a project for a grocery shop that uses a layered architecture. It provides features such as ordering products, adding to cart and wishlist, uploading new products, user login and signup, and much more. This project is built using Node.js, Express, MongoDB, and other dependencies.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev nodemon src/index",
+    "start": "node src/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayoadesokan/grocery-shop-layered.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sayoadesokan/grocery-shop-layered/issues"
+  },
+  "homepage": "https://github.com/sayoadesokan/grocery-shop-layered#readme"
 }
