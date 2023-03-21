@@ -36,7 +36,7 @@ class CustomerService {
       }
       return formateData(null);
     } catch (error) {
-      throw new APIError('Data Not Found', err);
+      throw new APIError('Data Not Found', error);
     }
   }
 
@@ -61,7 +61,7 @@ class CustomerService {
 
       return formateData({ id: existingCustomer._id, token });
     } catch (error) {
-      throw new APIError('Data Not found', err);
+      throw new APIError('Data Not found', error);
     }
   }
 

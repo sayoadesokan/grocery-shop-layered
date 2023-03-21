@@ -27,7 +27,7 @@ module.exports = (app) => {
     }
   });
 
-  app.get('category/:type', async (req, res, next) => {
+  app.get('/category/:type', async (req, res, next) => {
     const type = req.params.type;
     try {
       const { data } = await service.GetProductsByCategory(type);
@@ -119,7 +119,7 @@ module.exports = (app) => {
       const { data } = await service.getProduct();
       return res.status(200).json(data);
     } catch (error) {
-      next(err);
+      next(error);
     }
   });
 };

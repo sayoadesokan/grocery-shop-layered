@@ -10,7 +10,7 @@ module.exports = (app) => {
       const { data } = await service.signUp({ email, password, phone });
       res.json(data);
     } catch (error) {
-      next(err);
+      next(error);
     }
   });
 

@@ -8,7 +8,7 @@ const startServer = async () => {
 
   await expressApp(app);
 
-  await databaseConnection;
+  await databaseConnection();
 
   app
     .listen(PORT, () => {
